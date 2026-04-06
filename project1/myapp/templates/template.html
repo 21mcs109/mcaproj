@@ -1,6 +1,19 @@
+{% load static %}
+
 <!DOCTYPE html> 
 <html> 
+    <head>
+        <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+
+    </head>
 <body> 
-<h1>{{firstname}}</h1>
+    {% with greeting=3 %} 
+   {% if greeting == 2 %} 
+<h1>Hello</h1> 
+{% else %} 
+<h1>Hii {{greeting}}</h1> 
+{% endif %} 
+{% endwith %}
+
 </body> 
 </html>
